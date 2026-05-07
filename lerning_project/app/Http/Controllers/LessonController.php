@@ -9,7 +9,7 @@ class LessonController extends Controller
 {
     public function index()
     {
-        $lesson = Lesson::find('lesson_id', 1);
+        $lesson = Lesson::find(1);
         dd($lesson);
     }
 }
