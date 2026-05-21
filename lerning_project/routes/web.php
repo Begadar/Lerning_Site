@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/lessons', [LessonController::class, 'index']);
+Route::get('/lessons/create', [LessonController::class, 'create']);
