@@ -8,4 +8,6 @@ class Lesson extends Model
 {
     protected $table = "lessons";
     protected $primaryKey = "lesson_id";
+
+    protected $guarded = [];
 }
