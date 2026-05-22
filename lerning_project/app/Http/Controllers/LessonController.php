@@ -40,4 +40,20 @@ class LessonController extends Controller
 
        dd("Create");
     }
+
+    public function update()
+    {
+        $lesson = Lesson::find(8);
+        
+        $lesson->update(
+        [
+            'lesson_name' => 'UPDETEd Физика',
+            'lesson_topic' => 'UPDETEd Движение материальной точки',
+            'lesson_image' => 'UPDETEd image2.png',
+            'lesson_time' => 31,
+            'lesson_is_finished' => 1,
+        ]);
+
+        dd('Updated');
+    }
 }
