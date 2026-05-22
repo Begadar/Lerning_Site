@@ -15,7 +15,7 @@ class LessonController extends Controller
 
     public function create()
     {
-        $postsArr = 
+        $lessonsArr = 
        [
             [ 
                 'lesson_name' => 'Физика',
@@ -33,6 +33,11 @@ class LessonController extends Controller
             ],
        ];
 
-       Lesson::create($postsArr);
+       foreach ($lessonsArr as $lesson) 
+       {
+            Lesson::create($lesson);
+       }
+
+       dd("Create");
     }
 }
