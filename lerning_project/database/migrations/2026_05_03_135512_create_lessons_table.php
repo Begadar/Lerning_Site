@@ -19,6 +19,8 @@ return new class extends Migration
             $table->unsignedInteger('lesson_time')->default(52);
             $table->boolean('lesson_is_finished')->default(false);
             $table->timestamps();
+
+            $table->softDeletes();
         });
     }
 
