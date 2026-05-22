@@ -56,4 +56,11 @@ class LessonController extends Controller
 
         dd('Updated');
     }
+
+    public function delete()
+    {
+        $lesson = Lesson::find(8);
+        $lesson->delete();
+        dd('Deleted');
+    }
 }
