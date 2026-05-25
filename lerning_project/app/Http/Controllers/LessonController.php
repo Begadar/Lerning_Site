@@ -80,4 +80,21 @@ class LessonController extends Controller
         dump($lesson->lesson_topic);
         dd('Finished');
     }
+
+    public function updateOrCreate()
+    {
+        $anotherLesson = 
+        [
+            'lesson_name' => 'no Update_Or_Create Физика',
+            'lesson_topic' => 'no Update_Or_Create Some Движение материальной точки',
+            'lesson_image' => 'no Update_Or_Create Some image2.png',
+            'lesson_time' => 31,
+            'lesson_is_finished' => 1,
+        ];
+        
+        $lesson = Lesson::updateOrCreate(['lesson_topic' => 'Some not Движение материальной точки'], $anotherLesson);
+
+        dump($lesson->lesson_topic);
+        dd('');
+    }
 }
