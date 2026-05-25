@@ -63,4 +63,21 @@ class LessonController extends Controller
         $lesson->delete();
         dd('Deleted');
     }
+
+    public function firstOrCreate()
+    {
+        $anotherLesson = 
+        [
+            'lesson_name' => 'Some Физика',
+            'lesson_topic' => 'Some Движение материальной точки',
+            'lesson_image' => 'Some image2.png',
+            'lesson_time' => 31,
+            'lesson_is_finished' => 1,
+        ];
+
+        $lesson = Lesson::firstOrCreate(['lesson_topic' => 'Some Движение материальной точки'], $anotherLesson);
+        
+        dump($lesson->lesson_topic);
+        dd('Finished');
+    }
 }
